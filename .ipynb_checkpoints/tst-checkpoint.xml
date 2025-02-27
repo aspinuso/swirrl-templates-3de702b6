@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='ASCII'?>
+<prov:document xmlns:brick="https://brickschema.org/schema/Brick#" xmlns:csvw="http://www.w3.org/ns/csvw#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcam="http://purl.org/dc/dcam/" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:geo="http://www.opengis.net/ont/geosparql#" xmlns:odrl="http://www.w3.org/ns/odrl/2/" xmlns:org="http://www.w3.org/ns/org#" xmlns:prof="http://www.w3.org/ns/dx/prof/" xmlns:qb="http://purl.org/linked-data/cube#" xmlns:schema="https://schema.org/" xmlns:sh="http://www.w3.org/ns/shacl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:sosa="http://www.w3.org/ns/sosa/" xmlns:ssn="http://www.w3.org/ns/ssn/" xmlns:time="http://www.w3.org/2006/time#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:void="http://rdfs.org/ns/void#" xmlns:wgs="https://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:uuid="urn:uuid:" xmlns:vargen="http://openprovenance.org/vargen#" xmlns:provone="http://purl.dataone.org/provone/2015/01/15/ontology#" xmlns:tmpl="http://openprovenance.org/tmpl#" xmlns:var="http://openprovenance.org/var#" xmlns:swirrl="http://swirrl.knmi.nl/ns#" xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:bundle prov:id="vargen:workflowFail">
+    <prov:used>
+      <prov:activity prov:ref="var:wfrun"/>
+      <prov:entity prov:ref="vargen:wfInput"/>
+    </prov:used>
+    <prov:actedOnBehalfOf>
+      <prov:delegate prov:ref="var:runAgent"/>
+      <prov:responsible prov:ref="var:user"/>
+    </prov:actedOnBehalfOf>
+    <prov:plan prov:id="var:workflowId">
+      <prov:label xsi:type="xsd:QName">var:workflowName</prov:label>
+      <prov:location xsi:type="xsd:QName">var:systemImageLocation</prov:location>
+      <prov:type xsi:type="xsd:QName">provone:Workflow</prov:type>
+      <dcterms:identifier xsi:type="xsd:QName">var:workflowId</dcterms:identifier>
+    </prov:plan>
+    <prov:entity prov:id="vargen:plan"/>
+    <prov:entity prov:id="vargen:wfInput">
+      <prov:label xsi:type="xsd:QName">var:parname</prov:label>
+      <prov:type xsi:type="xsd:QName">provone:Data</prov:type>
+      <prov:value xsi:type="xsd:QName">var:parvalue</prov:value>
+    </prov:entity>
+    <prov:wasAssociatedWith>
+      <prov:activity prov:ref="var:wfrun"/>
+      <prov:agent prov:ref="var:user"/>
+      <prov:plan prov:ref="vargen:plan"/>
+    </prov:wasAssociatedWith>
+    <prov:wasAssociatedWith>
+      <prov:activity prov:ref="var:wfrun"/>
+      <prov:agent prov:ref="var:runAgent"/>
+      <prov:plan prov:ref="var:workflowId"/>
+    </prov:wasAssociatedWith>
+    <prov:activity prov:id="var:wfrun">
+      <prov:location xsi:type="xsd:QName">var:methodPath</prov:location>
+      <prov:type xsi:type="xsd:QName">provone:Execution</prov:type>
+      <prov:type xsi:type="xsd:QName">swirrl:RunWorkflow</prov:type>
+      <dcterms:identifier xsi:type="xsd:QName">var:wfrun</dcterms:identifier>
+      <swirrl:jobId xsi:type="xsd:QName">var:jobId</swirrl:jobId>
+      <swirrl:message xsi:type="xsd:QName">var:message</swirrl:message>
+      <swirrl:sessionId xsi:type="xsd:QName">var:sessionId</swirrl:sessionId>
+      <tmpl:endTime xsi:type="xsd:QName">var:endTime</tmpl:endTime>
+      <tmpl:startTime xsi:type="xsd:QName">var:startTime</tmpl:startTime>
+    </prov:activity>
+    <prov:softwareAgent prov:id="var:runAgent">
+      <prov:label xsi:type="xsd:QName">var:nameApi</prov:label>
+    </prov:softwareAgent>
+    <prov:person prov:id="var:user">
+      <swirrl:authMode xsi:type="xsd:QName">var:authmode</swirrl:authMode>
+      <swirrl:group xsi:type="xsd:QName">var:group</swirrl:group>
+      <vcard:uid xsi:type="xsd:QName">var:name</vcard:uid>
+    </prov:person>
+  </prov:bundle>
+</prov:document>
