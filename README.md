@@ -1,9 +1,9 @@
 
 ## SWIRRL PROV Templates
 
-Just a few examples of PROV Templates used in SWIRRL [1] to record provenance associated with the resources managed via the SWIRRL Virtual Rsearch Environment API (Workflows, Notebooks, Visualisation tools).
+Here are a few examples of PROV Templates used in SWIRRL [1] to record provenance associated with resources managed via the SWIRRL Virtual Research Environment (VRE) API, including Workflows, Notebooks, and Visualization tools.
 
-SWIRRL is used in several contexts. It is available to users of  [Climate4Impact](https://climate4Impact.eu) [2], to obtain analysis workspaces for CMIP5/CMIP6 data that are interactively fetched from ESGF.
+SWIRRL is used in various contexts. It is available to users of  [Climate4Impact](https://climate4Impact.eu) [2], to provide analysis workspaces for CMIP5/CMIP6 data, which are interactively fetched from ESGF.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aspinuso/swirrl-templates-3de702b6/HEAD)
 
